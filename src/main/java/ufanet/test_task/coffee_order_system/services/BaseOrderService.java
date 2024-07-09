@@ -40,7 +40,7 @@ public class BaseOrderService implements OrderService{
         log.info("Публикация события {}", event);
 
         int orderId = event.getOrderId();
-        if(orderRegisteredEventRepository.existsById(orderId)) {
+        if(orderRegisteredEventRepository.existsById(orderId) && !(event instanceof OrderRegisteredEvent)) {
             if(!orderCanceledEventRepository.existsById(orderId) && !orderIssuedEventRepository.existsById(orderId)) {
                 orderEventRepository.save(event);
             } else{
