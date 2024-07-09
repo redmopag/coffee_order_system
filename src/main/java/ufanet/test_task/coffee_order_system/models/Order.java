@@ -24,7 +24,16 @@ public class Order {
                     .replace("Order", "");
         }
     }
-    public List<String> getEvents(){
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", orderEvents=" + orderEvents +
+                '}';
+    }
+
+    public List<String> getEventsSummary(){
         return orderEvents.stream()
                 .map(el -> String.format("%s at %s", el.getClass().getSimpleName(),el.getEventDateTime().toString()))
                 .toList();
