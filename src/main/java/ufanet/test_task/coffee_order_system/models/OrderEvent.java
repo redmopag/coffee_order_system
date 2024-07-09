@@ -6,7 +6,8 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Table(name = "order_events")
+@Inheritance(strategy = InheritanceType.JOINED)
 @Data
 public abstract class OrderEvent {
     @Id
