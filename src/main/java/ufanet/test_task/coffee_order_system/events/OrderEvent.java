@@ -8,13 +8,15 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public abstract class OrderEvent {
     protected int orderId;
     protected int employeeId;
-    protected OrderStatus eventType;
+    protected final OrderStatus eventType;
     protected LocalDateTime eventDateTime;
+
+    protected OrderEvent(OrderStatus eventType) {
+        this.eventType = eventType;
+    }
 
     public abstract void applyToAggregate(Order order);
 }

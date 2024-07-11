@@ -17,8 +17,8 @@ public class EventStore {
     @Column(name = "order_id", nullable = false)
     private int orderId;
 
-    @Column(name = "event_type", nullable = false)
-    private OrderStatus eventType;
+    @Column(name = "event", nullable = false)
+    private Class<? extends OrderEvent> eventClass;
 
     // Данные по событию будут хранится в виде json
     @Column(name = "event_data", nullable = false)

@@ -30,7 +30,7 @@ public class EventStoreService {
     public void saveEvent(OrderEvent orderEvent) throws JsonProcessingException {
         EventStore eventStore = new EventStore();
         eventStore.setOrderId(orderEvent.getOrderId());
-        eventStore.setEventType(orderEvent.getEventType());
+        eventStore.setEventClass(orderEvent.getClass());
         eventStore.setEventData(serializeEvent(orderEvent));
         eventStore.setEventDateTime(orderEvent.getEventDateTime());
         eventStoreRepository.save(eventStore);
@@ -41,7 +41,7 @@ public class EventStoreService {
                 .stream()
                 .map(eventStore -> {
                     try {
-                        return deserializeEvent(eventStore.getEventData(), eventStore.getEventType());
+                        return deserializeEvent(eventStore.getEventData(), eventStore.getEventClass());
                     } catch (JsonProcessingException e) {
                         log.error(e.getMessage());
                         return null;
@@ -54,27 +54,10 @@ public class EventStoreService {
         return objectMapper.writeValueAsString(orderEvent);
     }
 
-    /*
-    Можно попробовать записать в бд тип класс.class или что-то такое
-     */
-    public OrderEvent deserializeEvent(String eventData, OrderStatus type) throws JsonProcessingException {
-        switch (type){
-            case READY -> {
-                return objectMapper.readValue(eventData, OrderReadyEvent.class);
-            }
-            case TAKEN -> {
-                return objectMapper.readValue(eventData, OrderTakenInWorkEvent.class);
-            }
-            case ISSUED -> {
-                return objectMapper.readValue(eventData, OrderIssuedEvent.class);
-            }
-            case CANCELED -> {
-                return objectMapper.readValue(eventData, OrderCanceledEvent.class);
-            }
-            case REGISTERED -> {
-                return objectMapper.readValue(eventData, OrderRegisteredEvent.class);
-            }
-            default -> throw new IllegalArgumentException("Unknown event type" + type);
-        }
+
+    public OrderEvent deserializeEvent(String eventData,
+                                       Class<? extends OrderEvent> type) throws JsonProcessingException
+    {
+        return objectMapper.readValue(eventData, type);
     }
 }

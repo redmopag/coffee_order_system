@@ -23,11 +23,14 @@ class CoffeeOrderSystemApplicationTests {
         LocalDateTime now = LocalDateTime.now();
 
         // Создание события
-        OrderRegisteredEvent orderEvent = new OrderRegisteredEvent(
-                1, 1, now,
-                1, now.plusMinutes(20),
-                1, 120
-        );
+        OrderRegisteredEvent orderEvent = new OrderRegisteredEvent();
+        orderEvent.setOrderId(1);
+        orderEvent.setClientId(1);
+        orderEvent.setEventDateTime(now);
+        orderEvent.setProductId(1);
+        orderEvent.setProductCost(120);
+        orderEvent.setExpectedReadyTime(now.plusMinutes(20));
+        orderEvent.setEmployeeId(1);
 
         baseOrderService.publishEvent(orderEvent);
     }

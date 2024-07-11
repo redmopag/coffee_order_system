@@ -8,8 +8,6 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class OrderRegisteredEvent extends OrderEvent {
     private int clientId;
 
@@ -19,16 +17,8 @@ public class OrderRegisteredEvent extends OrderEvent {
 
     private double productCost;
 
-    public OrderRegisteredEvent(int orderId, int employeeId,
-                                LocalDateTime eventDateTime, int clientId,
-                                LocalDateTime expectedReadyTime, int productId,
-                                double productCost)
-    {
-        super(orderId, employeeId, OrderStatus.REGISTERED, eventDateTime);
-        this.clientId = clientId;
-        this.expectedReadyTime = expectedReadyTime;
-        this.productId = productId;
-        this.productCost = productCost;
+    public OrderRegisteredEvent(){
+        super(OrderStatus.REGISTERED);
     }
 
     @Override
