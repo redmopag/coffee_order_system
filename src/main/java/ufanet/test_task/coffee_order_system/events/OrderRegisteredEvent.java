@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@ToString
 public class OrderRegisteredEvent extends OrderEvent {
     private int clientId;
 

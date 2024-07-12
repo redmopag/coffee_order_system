@@ -6,8 +6,7 @@ import ufanet.test_task.coffee_order_system.models.Order;
 
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
+@Data
 public abstract class OrderEvent {
     protected int orderId;
     protected int employeeId;

@@ -7,7 +7,6 @@ import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ufanet.test_task.coffee_order_system.models.OrderStatus;
 import ufanet.test_task.coffee_order_system.events.*;
 import ufanet.test_task.coffee_order_system.repositories.EventStoreRepository;
 

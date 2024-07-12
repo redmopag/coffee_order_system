@@ -6,6 +6,7 @@ import ufanet.test_task.coffee_order_system.models.OrderStatus;
 
 @Getter
 @Setter
+@ToString
 public class OrderCanceledEvent extends OrderEvent {
     private String cancelReason;
 
