@@ -1,5 +1,6 @@
 package ufanet.test_task.coffee_order_system.models;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import ufanet.test_task.coffee_order_system.events.OrderEvent;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Getter
 @Setter
+@EqualsAndHashCode
 public class Order {
     private final int id;
     private int clientId;

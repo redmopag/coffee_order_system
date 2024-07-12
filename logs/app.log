@@ -1,300 +1,105 @@
-2024-07-11 01:25:35,985 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests]: CoffeeOrderSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-11 01:25:36,132 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests
-2024-07-11 01:25:36,607 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Starting CoffeeOrderSystemApplicationTests using Java 20 with PID 11104 (started by Airat in D:\programming\dev\coffee_order_system)
-2024-07-11 01:25:36,607 DEBUG u.t.c.CoffeeOrderSystemApplicationTests [main] Running with Spring Boot v3.3.1, Spring v6.1.10
-2024-07-11 01:25:36,608 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
-2024-07-11 01:25:37,046 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-11 01:25:37,100 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
-2024-07-11 01:25:37,520 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-11 01:25:37,610 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-11 01:25:37,657 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
-2024-07-11 01:25:38,066 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-11 01:25:38,100 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2024-07-11 01:25:38,344 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
-2024-07-11 01:25:38,351 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-07-11 01:25:38,386 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-07-11 01:25:39,418 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-11 01:25:39,461 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 01:25:39,974 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Started CoffeeOrderSystemApplicationTests in 3.597 seconds (process running for 5.203)
-2024-07-11 01:25:40,807 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 01:25:40,808 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-07-11 01:25:40,810 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-07-11 01:26:01,435 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests]: CoffeeOrderSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-11 01:26:01,549 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests
-2024-07-11 01:26:01,972 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Starting CoffeeOrderSystemApplicationTests using Java 20 with PID 744 (started by Airat in D:\programming\dev\coffee_order_system)
-2024-07-11 01:26:01,972 DEBUG u.t.c.CoffeeOrderSystemApplicationTests [main] Running with Spring Boot v3.3.1, Spring v6.1.10
-2024-07-11 01:26:01,973 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
-2024-07-11 01:26:02,387 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-11 01:26:02,434 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
-2024-07-11 01:26:02,848 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-11 01:26:02,905 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-11 01:26:02,945 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
-2024-07-11 01:26:03,316 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-11 01:26:03,347 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2024-07-11 01:26:03,577 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
-2024-07-11 01:26:03,579 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-07-11 01:26:03,621 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-07-11 01:26:04,873 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-11 01:26:04,911 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 01:26:05,431 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Started CoffeeOrderSystemApplicationTests in 3.693 seconds (process running for 5.237)
-2024-07-11 01:27:14,468 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s782ms902µs900ns).
-2024-07-11 01:27:24,506 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 01:27:24,507 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-07-11 01:27:24,509 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-07-11 01:30:51,863 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests]: CoffeeOrderSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-11 01:30:51,979 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests
-2024-07-11 01:30:52,297 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Starting CoffeeOrderSystemApplicationTests using Java 20 with PID 10872 (started by Airat in D:\programming\dev\coffee_order_system)
-2024-07-11 01:30:52,297 DEBUG u.t.c.CoffeeOrderSystemApplicationTests [main] Running with Spring Boot v3.3.1, Spring v6.1.10
-2024-07-11 01:30:52,298 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
-2024-07-11 01:30:52,683 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-11 01:30:52,728 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
-2024-07-11 01:30:53,092 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-11 01:30:53,157 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-11 01:30:53,193 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
-2024-07-11 01:30:53,497 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-11 01:30:53,518 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2024-07-11 01:30:53,709 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
-2024-07-11 01:30:53,710 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-07-11 01:30:53,752 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-07-11 01:30:54,600 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-11 01:30:54,635 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 01:30:55,065 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Started CoffeeOrderSystemApplicationTests in 2.961 seconds (process running for 4.157)
-2024-07-11 01:30:55,720 ERROR u.t.c.s.EventStoreService [main] Cannot construct instance of `ufanet.test_task.coffee_order_system.events.OrderRegisteredEvent` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
- at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 2]
-2024-07-11 01:30:55,745 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 01:30:55,748 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-07-11 01:30:55,751 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-07-11 01:35:15,113 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests]: CoffeeOrderSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-11 01:35:15,213 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests
-2024-07-11 01:35:15,591 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Starting CoffeeOrderSystemApplicationTests using Java 20 with PID 23060 (started by Airat in D:\programming\dev\coffee_order_system)
-2024-07-11 01:35:15,591 DEBUG u.t.c.CoffeeOrderSystemApplicationTests [main] Running with Spring Boot v3.3.1, Spring v6.1.10
-2024-07-11 01:35:15,592 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
-2024-07-11 01:35:15,982 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-11 01:35:16,040 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
-2024-07-11 01:35:16,495 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-11 01:35:16,563 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-11 01:35:16,597 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
-2024-07-11 01:35:16,930 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-11 01:35:16,979 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2024-07-11 01:35:17,178 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
-2024-07-11 01:35:17,179 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-07-11 01:35:17,219 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-07-11 01:35:18,158 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-11 01:35:18,196 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 01:35:18,712 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Started CoffeeOrderSystemApplicationTests in 3.319 seconds (process running for 4.763)
-2024-07-11 01:35:19,486 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 01:35:19,488 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-07-11 01:35:19,489 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-07-11 17:58:32,940 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests]: CoffeeOrderSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-11 17:58:33,186 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests
-2024-07-11 17:58:33,973 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Starting CoffeeOrderSystemApplicationTests using Java 20 with PID 20200 (started by Airat in D:\programming\dev\coffee_order_system)
-2024-07-11 17:58:33,974 DEBUG u.t.c.CoffeeOrderSystemApplicationTests [main] Running with Spring Boot v3.3.1, Spring v6.1.10
-2024-07-11 17:58:33,976 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
-2024-07-11 17:58:34,761 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-11 17:58:34,846 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interface.
-2024-07-11 17:58:35,695 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-11 17:58:35,823 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-11 17:58:35,922 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
-2024-07-11 17:58:36,735 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-11 17:58:36,774 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2024-07-11 17:58:37,276 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
-2024-07-11 17:58:37,279 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-07-11 17:58:37,358 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-07-11 17:58:39,171 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-11 17:58:39,240 WARN o.h.t.s.i.ExceptionHandlerLoggedImpl [main] GenerationTarget encountered exception accepting command : Error executing DDL "alter table if exists order_events add column event varchar(255) not null" via JDBC [Значение NULL не разрешено для поля "EVENT"
-NULL not allowed for column "EVENT";]
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table if exists order_events add column event varchar(255) not null" via JDBC [Значение NULL не разрешено для поля "EVENT"
-NULL not allowed for column "EVENT";]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:575)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:515)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:333)
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:84)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
-	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Значение NULL не разрешено для поля "EVENT"
-NULL not allowed for column "EVENT"; SQL statement:
-INSERT INTO "PUBLIC"."ORDER_EVENTS_COPY_3_0"("ID", "EVENT_DATA", "EVENT_DATE_TIME", "EVENT_TYPE", "ORDER_ID") OVERRIDING SYSTEM VALUE SELECT "ID", "EVENT_DATA", "EVENT_DATE_TIME", "EVENT_TYPE", "ORDER_ID" FROM "PUBLIC"."ORDER_EVENTS" [23502-224]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
-	at org.h2.message.DbException.get(DbException.java:223)
-	at org.h2.message.DbException.get(DbException.java:199)
-	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:365)
-	at org.h2.table.Table.convertInsertRow(Table.java:936)
-	at org.h2.command.dml.Insert.addRow(Insert.java:229)
-	at org.h2.command.dml.Insert.insertRows(Insert.java:203)
-	at org.h2.command.dml.Insert.update(Insert.java:135)
-	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at org.h2.command.Command.executeUpdate(Command.java:256)
-	at org.h2.command.ddl.AlterTableAlterColumn.execute(AlterTableAlterColumn.java:649)
-	at org.h2.command.ddl.AlterTableAlterColumn.cloneTableStructure(AlterTableAlterColumn.java:561)
-	at org.h2.command.ddl.AlterTableAlterColumn.copyData(AlterTableAlterColumn.java:343)
-	at org.h2.command.ddl.AlterTableAlterColumn.update(AlterTableAlterColumn.java:244)
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at org.h2.command.Command.executeUpdate(Command.java:256)
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
-	... 114 common frames omitted
-2024-07-11 17:58:39,253 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 17:58:40,144 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Started CoffeeOrderSystemApplicationTests in 6.588 seconds (process running for 10.027)
-2024-07-11 17:58:52,760 WARN o.h.e.j.s.SqlExceptionHelper [main] SQL Error: 42122, SQLState: 42S22
-2024-07-11 17:58:52,760 ERROR o.h.e.j.s.SqlExceptionHelper [main] Столбец "ES1_0.EVENT" не найден
-Column "ES1_0.EVENT" not found; SQL statement:
-select es1_0.id,es1_0.event,es1_0.event_data,es1_0.event_date_time,es1_0.order_id from order_events es1_0 where es1_0.order_id=? order by es1_0.event_date_time [42122-224]
-2024-07-11 17:58:57,179 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 17:58:57,180 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-07-11 17:58:57,182 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-07-11 18:00:00,222 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests]: CoffeeOrderSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-11 18:00:00,405 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests
-2024-07-11 18:00:01,065 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Starting CoffeeOrderSystemApplicationTests using Java 20 with PID 21608 (started by Airat in D:\programming\dev\coffee_order_system)
-2024-07-11 18:00:01,066 DEBUG u.t.c.CoffeeOrderSystemApplicationTests [main] Running with Spring Boot v3.3.1, Spring v6.1.10
-2024-07-11 18:00:01,067 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
-2024-07-11 18:00:01,746 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-11 18:00:01,926 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 150 ms. Found 1 JPA repository interface.
-2024-07-11 18:00:02,565 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-11 18:00:02,655 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-11 18:00:02,707 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
-2024-07-11 18:00:03,239 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-11 18:00:03,269 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2024-07-11 18:00:03,483 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
-2024-07-11 18:00:03,484 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-07-11 18:00:03,512 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-07-11 18:00:04,901 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-11 18:00:04,970 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 18:00:05,750 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Started CoffeeOrderSystemApplicationTests in 5.1 seconds (process running for 7.431)
-2024-07-11 18:00:06,844 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 18:00:06,845 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-07-11 18:00:06,848 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-07-11 18:01:17,572 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests]: CoffeeOrderSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-11 18:01:17,746 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplicationTests
-2024-07-11 18:01:18,345 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Starting CoffeeOrderSystemApplicationTests using Java 20 with PID 9092 (started by Airat in D:\programming\dev\coffee_order_system)
-2024-07-11 18:01:18,345 DEBUG u.t.c.CoffeeOrderSystemApplicationTests [main] Running with Spring Boot v3.3.1, Spring v6.1.10
-2024-07-11 18:01:18,345 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
-2024-07-11 18:01:18,804 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-11 18:01:18,870 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
-2024-07-11 18:01:19,323 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-11 18:01:19,386 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-11 18:01:19,432 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
-2024-07-11 18:01:19,864 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-11 18:01:19,891 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2024-07-11 18:01:20,128 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
-2024-07-11 18:01:20,131 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-07-11 18:01:20,170 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-07-11 18:01:21,525 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-11 18:01:21,571 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 18:01:22,257 INFO u.t.c.CoffeeOrderSystemApplicationTests [main] Started CoffeeOrderSystemApplicationTests in 4.266 seconds (process running for 6.187)
-2024-07-11 18:01:23,432 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-11 18:01:23,434 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-07-11 18:01:23,436 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-13 00:29:18,701 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.EventStoreServiceTest]: EventStoreServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-13 00:29:18,981 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.EventStoreServiceTest
+2024-07-13 00:29:19,962 INFO u.t.c.EventStoreServiceTest [main] Starting EventStoreServiceTest using Java 20 with PID 14844 (started by Airat in D:\programming\dev\coffee_order_system)
+2024-07-13 00:29:19,964 DEBUG u.t.c.EventStoreServiceTest [main] Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-07-13 00:29:19,966 INFO u.t.c.EventStoreServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-13 00:29:20,694 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 00:29:20,775 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interface.
+2024-07-13 00:29:22,851 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 00:29:23,002 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-13 00:29:23,089 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-07-13 00:29:23,354 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 00:29:23,420 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-13 00:29:23,842 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
+2024-07-13 00:29:23,845 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-13 00:29:23,909 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-13 00:29:25,410 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 00:29:25,467 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 00:29:25,784 INFO u.t.c.EventStoreServiceTest [main] Started EventStoreServiceTest in 6.391 seconds (process running for 9.178)
+2024-07-13 00:29:26,117 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 00:29:26,120 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-13 00:29:26,124 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-13 00:42:26,708 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.EventStoreServiceTest]: EventStoreServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-13 00:42:26,939 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.EventStoreServiceTest
+2024-07-13 00:42:29,120 INFO u.t.c.EventStoreServiceTest [main] Starting EventStoreServiceTest using Java 20 with PID 15276 (started by Airat in D:\programming\dev\coffee_order_system)
+2024-07-13 00:42:29,120 DEBUG u.t.c.EventStoreServiceTest [main] Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-07-13 00:42:29,121 INFO u.t.c.EventStoreServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-13 00:42:29,969 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 00:42:30,076 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 85 ms. Found 1 JPA repository interface.
+2024-07-13 00:42:31,149 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 00:42:31,288 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-13 00:42:31,364 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-07-13 00:42:31,685 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 00:42:31,762 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-13 00:42:32,236 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
+2024-07-13 00:42:32,240 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-13 00:42:32,297 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-13 00:42:33,786 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 00:42:33,846 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 00:42:34,207 INFO u.t.c.EventStoreServiceTest [main] Started EventStoreServiceTest in 5.476 seconds (process running for 9.597)
+2024-07-13 00:42:34,636 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 00:42:34,639 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-13 00:42:34,643 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-13 00:43:22,009 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.EventStoreServiceTest]: EventStoreServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-13 00:43:22,223 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.EventStoreServiceTest
+2024-07-13 00:43:24,110 INFO u.t.c.EventStoreServiceTest [main] Starting EventStoreServiceTest using Java 20 with PID 8824 (started by Airat in D:\programming\dev\coffee_order_system)
+2024-07-13 00:43:24,111 DEBUG u.t.c.EventStoreServiceTest [main] Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-07-13 00:43:24,112 INFO u.t.c.EventStoreServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-13 00:43:24,754 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 00:43:24,828 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2024-07-13 00:43:25,578 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 00:43:25,681 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-13 00:43:25,746 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-07-13 00:43:26,011 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 00:43:26,101 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-13 00:43:26,509 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
+2024-07-13 00:43:26,512 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-13 00:43:26,567 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-13 00:43:27,803 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 00:43:27,851 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 00:43:28,176 INFO u.t.c.EventStoreServiceTest [main] Started EventStoreServiceTest in 4.438 seconds (process running for 7.957)
+2024-07-13 00:43:28,514 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 00:43:28,517 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-13 00:43:28,521 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-13 00:43:52,526 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.EventStoreServiceTest]: EventStoreServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-13 00:43:52,742 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.EventStoreServiceTest
+2024-07-13 00:43:54,519 INFO u.t.c.EventStoreServiceTest [main] Starting EventStoreServiceTest using Java 20 with PID 17200 (started by Airat in D:\programming\dev\coffee_order_system)
+2024-07-13 00:43:54,520 DEBUG u.t.c.EventStoreServiceTest [main] Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-07-13 00:43:54,521 INFO u.t.c.EventStoreServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-13 00:43:55,180 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 00:43:55,282 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.
+2024-07-13 00:43:56,341 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 00:43:56,440 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-13 00:43:56,498 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-07-13 00:43:56,755 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 00:43:56,840 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-13 00:43:57,289 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
+2024-07-13 00:43:57,293 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-13 00:43:57,344 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-13 00:43:58,713 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 00:43:58,762 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 00:43:59,074 INFO u.t.c.EventStoreServiceTest [main] Started EventStoreServiceTest in 4.815 seconds (process running for 8.374)
+2024-07-13 00:43:59,403 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 00:43:59,407 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-13 00:43:59,410 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-13 00:55:29,258 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ufanet.test_task.coffee_order_system.EventStoreServiceTest]: EventStoreServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-13 00:55:29,479 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ufanet.test_task.coffee_order_system.CoffeeOrderSystemApplication for test class ufanet.test_task.coffee_order_system.EventStoreServiceTest
+2024-07-13 00:55:31,408 INFO u.t.c.EventStoreServiceTest [main] Starting EventStoreServiceTest using Java 20 with PID 1424 (started by Airat in D:\programming\dev\coffee_order_system)
+2024-07-13 00:55:31,408 DEBUG u.t.c.EventStoreServiceTest [main] Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-07-13 00:55:31,409 INFO u.t.c.EventStoreServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-13 00:55:31,989 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 00:55:32,085 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interface.
+2024-07-13 00:55:33,273 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 00:55:33,384 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-13 00:55:33,446 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-07-13 00:55:33,709 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 00:55:33,781 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-13 00:55:34,208 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/coffee_order_system_db user=ROOT
+2024-07-13 00:55:34,211 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-13 00:55:34,256 WARN o.h.o.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-13 00:55:35,415 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 00:55:35,465 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 00:55:35,776 INFO u.t.c.EventStoreServiceTest [main] Started EventStoreServiceTest in 4.68 seconds (process running for 8.304)
+2024-07-13 00:55:36,087 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 00:55:36,091 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-13 00:55:36,095 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
