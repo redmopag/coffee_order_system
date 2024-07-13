@@ -1,17 +1,24 @@
 package ufanet.test_task.coffee_order_system.events;
 
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import ufanet.test_task.coffee_order_system.models.Order;
 import ufanet.test_task.coffee_order_system.models.OrderStatus;
 
-@ToString
+@Entity
+@DiscriminatorValue("order_issued")
+@EqualsAndHashCode(callSuper = true)
+@Data
 public class OrderIssuedEvent extends OrderEvent {
-    public OrderIssuedEvent(){
-        super(OrderStatus.ISSUED);
+    @Override
+    public void applyToAggregate(Order order) {
+        order.setStatus(OrderStatus.ISSUED);
     }
 
     @Override
-    public void applyToAggregate(Order order) {
-        order.setStatus(eventType);
-    }
+    public OrderStatus getEventType(){return OrderStatus.ISSUED;}
+
 }

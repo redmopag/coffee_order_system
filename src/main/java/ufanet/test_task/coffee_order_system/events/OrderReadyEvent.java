@@ -1,19 +1,22 @@
 package ufanet.test_task.coffee_order_system.events;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+import lombok.*;
 import ufanet.test_task.coffee_order_system.models.Order;
 import ufanet.test_task.coffee_order_system.models.OrderStatus;
 
-@ToString
+@EqualsAndHashCode(callSuper = true)
+@Data
+@Entity
+@DiscriminatorValue("order_ready")
 public class OrderReadyEvent extends OrderEvent {
-    public OrderReadyEvent(){
-        super(OrderStatus.READY);
+    @Override
+    public void applyToAggregate(Order order) {
+        order.setStatus(OrderStatus.READY);
     }
 
     @Override
-    public void applyToAggregate(Order order) {
-        order.setStatus(eventType);
-    }
+    public OrderStatus getEventType(){return OrderStatus.READY;}
 }

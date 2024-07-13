@@ -1,20 +1,15 @@
 package ufanet.test_task.coffee_order_system.models;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import ufanet.test_task.coffee_order_system.events.OrderEvent;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
 public class Order {
     private final int id;
     private int clientId;
-    private int employeeId;
     private LocalDateTime issueExpectedTime;
     private int productId;
     private double productPrice;

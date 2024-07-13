@@ -1,22 +1,26 @@
 package ufanet.test_task.coffee_order_system.events;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Transient;
 import lombok.*;
 import ufanet.test_task.coffee_order_system.models.Order;
 import ufanet.test_task.coffee_order_system.models.OrderStatus;
 
-@Getter
-@Setter
-@ToString
+@Entity
+@DiscriminatorValue("order_canceled")
+@EqualsAndHashCode(callSuper = true)
+@Data
 public class OrderCanceledEvent extends OrderEvent {
+    @Transient // Поле не содержится в таблице
     private String cancelReason;
-
-    public OrderCanceledEvent(){
-        super(OrderStatus.CANCELED);
-    }
 
     @Override
     public void applyToAggregate(Order order) {
-        order.setStatus(eventType);
+        order.setStatus(OrderStatus.CANCELED);
         order.setCancelReason(cancelReason);
     }
+
+    @Override
+    public OrderStatus getEventType(){return OrderStatus.CANCELED;}
 }
