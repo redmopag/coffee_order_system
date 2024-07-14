@@ -28,15 +28,14 @@ public class OrderEventService implements OrderService{
         this.objectMapper = new ObjectMapper();
         this.objectMapper.registerModule(new JavaTimeModule());
 
-        this.orderStatuses = new LinkedList<>();
-        setOrderStatuses();
+        this.orderStatuses = setOrderStatuses();
     }
 
     /*
     Думал на счёт паттерна цепочки ответсвенности, но отличия будут только в типе события,
     а проверка везде одна и та же, так что решил его не использовать
     */
-    private void checkEvent(Iterator<OrderEvent> it,
+    protected void checkEvent(Iterator<OrderEvent> it,
                             OrderEvent event,
                             Iterator<OrderStatus> statusIterator) throws IllegalArgumentException
     {
@@ -45,21 +44,24 @@ public class OrderEventService implements OrderService{
             String errorMessage = "Событию " + event + " должно предшествовать событие регистрации заказа";
             log.error(errorMessage);
             throw new IllegalStateException(errorMessage);
-        } else if(event.getEventType() == status){
-            String errorMessage = "Событие: " + event + "уже произошло для указанного заказа";
+        } else if(it.hasNext() && event.getEventType() == status){
+            String errorMessage = "Событие: " + event + " уже произошло для указанного заказа";
             log.error(errorMessage);
             throw new IllegalStateException(errorMessage);
-        } else if(event.getEventType() != OrderStatus.CANCELED){
+        } else if(it.hasNext() && event.getEventType() != OrderStatus.CANCELED){
             it.next();
             checkEvent(it, event, statusIterator);
         }
     }
 
-    protected void setOrderStatuses(){
+    protected List<OrderStatus> setOrderStatuses(){
+        List<OrderStatus> orderStatuses = new LinkedList<>();
         orderStatuses.add(OrderStatus.REGISTERED);
         orderStatuses.add(OrderStatus.TAKEN);
         orderStatuses.add(OrderStatus.READY);
         orderStatuses.add(OrderStatus.ISSUED);
+
+        return orderStatuses;
     }
 
     @Override
@@ -107,7 +109,7 @@ public class OrderEventService implements OrderService{
     /*
     Оаставил public для тестов
      */
-    public List<OrderEvent> getEvents(int orderId) throws RuntimeJsonMappingException {
+    private List<OrderEvent> getEvents(int orderId) throws RuntimeJsonMappingException {
         return orderEventRepository.findAllByOrderIdOrderByEventDateTime(orderId)
                 .stream()
                 .map(orderEvent -> {

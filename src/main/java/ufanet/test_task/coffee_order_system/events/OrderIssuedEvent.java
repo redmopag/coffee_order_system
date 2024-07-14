@@ -1,6 +1,5 @@
 package ufanet.test_task.coffee_order_system.events;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.Data;
