@@ -1,5 +1,6 @@
 package ufanet.test_task.coffee_order_system;
 
+import com.fasterxml.jackson.databind.RuntimeJsonMappingException;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -53,13 +54,30 @@ public class OrderEventServiceTest {
         registered.setExpectedReadyTime(now.plusMinutes(20));
         registered.setClientId(1);
 
-        orderEventService.publishEvent(registered);
+        if(!orderEventRepository.existsByOrderId(1)){
+            orderEventService.publishEvent(registered);
+        }
     }
 
     @Test
     @Order(1)
     public void shouldReturnOrderTest(){
         assertEquals(OrderStatus.REGISTERED, orderEventService.findOrder(1).getStatus());
+    }
+
+    @Test
+    @Order(2)
+    public void shouldThrowExceptionWhenOneEventPublishTwiceForOrderTest(){
+        OrderRegisteredEvent registered = new OrderRegisteredEvent();
+        registered.setOrderId(1);
+        registered.setEmployeeId(1);
+        registered.setEventDateTime(now);
+        registered.setProductId(1);
+        registered.setProductCost(120);
+        registered.setExpectedReadyTime(now.plusMinutes(20));
+        registered.setClientId(1);
+
+        assertThrows(IllegalStateException.class, () -> orderEventService.publishEvent(registered));
     }
 
     @Test
@@ -73,7 +91,7 @@ public class OrderEventServiceTest {
         events.add(taken);
         when(orderEventService.getEvents(anyInt())).thenReturn(events);
 
-        assertThrows(IllegalArgumentException.class,() -> orderEventService.publishEvent(event));
+        assertThrows(IllegalStateException.class,() -> orderEventService.publishEvent(event));
     }
 
     @Test
@@ -88,7 +106,7 @@ public class OrderEventServiceTest {
         events.add(canceled);
 
         when(orderEventService.getEvents(anyInt())).thenReturn(events);
-        assertThrows(IllegalArgumentException.class, () -> orderEventService.publishEvent(event));
+        assertThrows(IllegalStateException.class, () -> orderEventService.publishEvent(event));
     }
 
     @Test
@@ -102,7 +120,7 @@ public class OrderEventServiceTest {
         events.add(issued);
 
         when(orderEventService.getEvents(anyInt())).thenReturn(events);
-        assertThrows(IllegalArgumentException.class, () -> orderEventService.publishEvent(event));
+        assertThrows(IllegalStateException.class, () -> orderEventService.publishEvent(event));
     }
 
     @Test

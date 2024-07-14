@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface OrderEventRepository extends JpaRepository<OrderEvent, Integer> {
     List<OrderEvent> findAllByOrderIdOrderByEventDateTime(int orderId);
+    boolean existsByOrderId(int orderId);
 }
