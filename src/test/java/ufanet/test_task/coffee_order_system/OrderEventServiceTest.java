@@ -37,7 +37,7 @@ public class OrderEventServiceTest {
     static OrderCanceledEvent canceled;
     static OrderIssuedEvent issued;
 
-    static LocalDateTime now = LocalDateTime.now();
+    static LocalDateTime now = LocalDateTime.of(2024, 7, 14, 22, 13);
 
     List<OrderEvent> events;
 
@@ -90,17 +90,19 @@ public class OrderEventServiceTest {
     @Disabled
     @Test
     @Order(0)
-    public void shouldSaveEventTest(){
-        if(!orderEventRepository.existsByOrderId(1)){
-            orderEventService.publishEvent(registered);
-        }
+    public void shouldSaveEventTest() throws IllegalStateException{
+        orderEventService.publishEvent(registered);
+        orderEventService.publishEvent(taken);
+        orderEventService.publishEvent(ready);
+        orderEventService.publishEvent(issued);
     }
 
     @Disabled
     @Test
     @Order(1)
     public void shouldReturnOrderTest(){
-        assertEquals(OrderStatus.REGISTERED, orderEventService.findOrder(1).getStatus());
+        assertEquals(OrderStatus.ISSUED, orderEventService.findOrder(1).getStatus());
+        assertEquals(1, orderEventService.findOrder(1).getClientId());
     }
 
     @Test
