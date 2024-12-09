@@ -34,6 +34,7 @@ public abstract class OrderEvent {
     protected String eventData;
 
     public abstract void applyToAggregate(Order order);
+
     @JsonIgnore
     public abstract OrderStatus getEventType();
 }

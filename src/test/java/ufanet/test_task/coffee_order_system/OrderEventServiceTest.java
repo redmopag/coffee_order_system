@@ -10,6 +10,7 @@ import org.springframework.boot.test.mock.mockito.SpyBean;
 import ufanet.test_task.coffee_order_system.events.*;
 import ufanet.test_task.coffee_order_system.models.OrderStatus;
 import ufanet.test_task.coffee_order_system.repositories.OrderEventRepository;
+import ufanet.test_task.coffee_order_system.services.OrderAggregationService;
 import ufanet.test_task.coffee_order_system.services.OrderEventService;
 
 import java.time.LocalDateTime;
@@ -30,6 +31,9 @@ public class OrderEventServiceTest {
 
     @Autowired
     OrderEventService orderEventService;
+
+    @Autowired
+    OrderAggregationService orderAggregationService;
 
     static OrderReadyEvent ready;
     static OrderRegisteredEvent registered;
@@ -101,8 +105,8 @@ public class OrderEventServiceTest {
     @Test
     @Order(1)
     public void shouldReturnOrderTest(){
-        assertEquals(OrderStatus.ISSUED, orderEventService.findOrder(1).getStatus());
-        assertEquals(1, orderEventService.findOrder(1).getClientId());
+        assertEquals(OrderStatus.ISSUED, orderAggregationService.findOrder(1).getStatus());
+        assertEquals(1, orderAggregationService.findOrder(1).getClientId());
     }
 
     @Test
@@ -140,7 +144,7 @@ public class OrderEventServiceTest {
     @Test
     public void shouldThrowExceptionWhenOrderNotFoundTest(){
         when(orderEventRepository.findAllByOrderIdOrderByEventDateTime(anyInt())).thenReturn(new ArrayList<>());
-        assertThrows(NoSuchElementException.class, () -> orderEventService.findOrder(2));
+        assertThrows(NoSuchElementException.class, () -> orderAggregationService.findOrder(2));
     }
 
     @Test

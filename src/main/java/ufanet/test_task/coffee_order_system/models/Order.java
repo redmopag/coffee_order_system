@@ -15,7 +15,6 @@ public class Order {
     private double productPrice;
     private OrderStatus status;
     private String cancelReason = "";
-
     private final List<OrderEvent> events;
 
     public Order(int id, List<OrderEvent> events) {

@@ -22,5 +22,7 @@ public class OrderCanceledEvent extends OrderEvent {
     }
 
     @Override
-    public OrderStatus getEventType(){return OrderStatus.CANCELED;}
+    public OrderStatus getEventType() {
+        return OrderStatus.CANCELED;
+    }
 }
