@@ -24,10 +24,6 @@
         <appender-ref ref="FILE-ROLLING"/>
     </logger>
 
-    <root level="error">
-        <appender-ref ref="FILE-ROLLING"/>
-    </root>
-
     <root level="info">
         <appender-ref ref="FILE-ROLLING"/>
     </root>

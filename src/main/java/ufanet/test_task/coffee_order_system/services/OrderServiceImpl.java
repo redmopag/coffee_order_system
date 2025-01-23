@@ -23,7 +23,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order findOrder(int id) {
-        return orderAggregationService.findOrder(id);
+    public Order findOrder(int orderId) {
+        return orderAggregationService.findOrder(orderId);
     }
 }

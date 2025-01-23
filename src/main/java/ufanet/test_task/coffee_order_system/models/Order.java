@@ -1,10 +1,8 @@
 package ufanet.test_task.coffee_order_system.models;
 
 import lombok.Data;
-import ufanet.test_task.coffee_order_system.events.OrderEvent;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 public class Order {
@@ -15,14 +13,8 @@ public class Order {
     private double productPrice;
     private OrderStatus status;
     private String cancelReason = "";
-    private final List<OrderEvent> events;
 
-    public Order(int id, List<OrderEvent> events) {
+    public Order(int id) {
         this.id = id;
-        this.events = events;
-        for(OrderEvent event : events)
-        {
-            event.applyToAggregate(this);
-        }
     }
 }

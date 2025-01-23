@@ -1,14 +1,12 @@
 package ufanet.test_task.coffee_order_system.services;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.RuntimeJsonMappingException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ufanet.test_task.coffee_order_system.events.OrderEvent;
 import ufanet.test_task.coffee_order_system.models.Order;
 import ufanet.test_task.coffee_order_system.repositories.OrderEventRepository;
-import ufanet.test_task.coffee_order_system.utils.EventSerializer;
+import ufanet.test_task.coffee_order_system.utils.EventDataSerializer;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -18,38 +16,32 @@ import java.util.NoSuchElementException;
 public class OrderAggregationService {
 
     private final OrderEventRepository orderEventRepository;
-    private final EventSerializer eventSerializer;
+    private final EventDataSerializer eventDataSerializer;
 
     @Autowired
-    public OrderAggregationService(OrderEventRepository orderEventRepository, EventSerializer eventSerializer) {
+    public OrderAggregationService(OrderEventRepository orderEventRepository, EventDataSerializer eventDataSerializer) {
         this.orderEventRepository = orderEventRepository;
-        this.eventSerializer = eventSerializer;
+        this.eventDataSerializer = eventDataSerializer;
     }
 
-    public Order findOrder(int id) {
-        log.info("Получение заказа по его id = {}", id);
-        List<OrderEvent> events;
+    public Order findOrder(int orderId) {
+        log.info("Получение заказа по его id = {}", orderId);
 
-        events = getEvents(id);
-        validateEvents(id, events);
+        List<OrderEvent> events = getEvents(orderId);
+        validateEvents(orderId, events);
 
-        return new Order(id, events);
+        Order order = new Order(orderId);
+        for (OrderEvent event : events) {
+            event.applyToAggregate(order);
+        }
+
+        return order;
     }
 
     private List<OrderEvent> getEvents(int orderId) {
         return orderEventRepository.findAllByOrderIdOrderByEventDateTime(orderId)
                 .stream()
-                .map(orderEvent -> {
-                    try {
-                        return eventSerializer.deserializeEvent(orderEvent.getEventData(), orderEvent.getClass());
-                    } catch (JsonProcessingException | IllegalArgumentException e) {
-                        String errorMessage = "Неудачная попытка десериализации"
-                                 + " полученного из базы данных события: " + orderEvent + ": "
-                                 + e.getMessage();
-                        log.error(errorMessage);
-                        throw new RuntimeJsonMappingException(errorMessage);
-                    }
-                })
+                .map(this::updateEventChanges)
                 .toList();
     }
 
@@ -58,5 +50,17 @@ public class OrderAggregationService {
             log.error("Не удалось найти элемент по его id: {}", id);
             throw new NoSuchElementException("Не удалось найти элемент по его id: " + id);
         }
+    }
+
+    private OrderEvent updateEventChanges(OrderEvent orderEvent) {
+        OrderEvent deserializedEvent = eventDataSerializer.deserializeEvent(
+                orderEvent.getEventData(), orderEvent.getClass());
+
+        deserializedEvent.setId(orderEvent.getId());
+        deserializedEvent.setOrderId(orderEvent.getOrderId());
+        deserializedEvent.setEmployeeId(orderEvent.getEmployeeId());
+        deserializedEvent.setEventDateTime(orderEvent.getEventDateTime());
+
+        return deserializedEvent;
     }
 }

@@ -1,7 +1,6 @@
 package ufanet.test_task.coffee_order_system.events;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 import ufanet.test_task.coffee_order_system.models.OrderStatus;
@@ -15,10 +14,11 @@ import java.time.LocalDateTime;
 @DiscriminatorValue("base")
 @DiscriminatorColumn(name = "event_type")
 @Data
-@JsonIgnoreProperties({"id", "eventData", "eventDateTime", "employeeId", "orderId"})
 public abstract class OrderEvent {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int id;
 
     @Column(name = "order_id", nullable = false)
